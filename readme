@@ -30,7 +30,7 @@ Para configurar o banco de dados, execute os seguintes comandos SQL:
 
 1. **Criação do Banco de Dados e Tabelas**
 
-```sql
+
 set sql_safe_updates = 0;
 
 drop database if exists inventario_armazem;
