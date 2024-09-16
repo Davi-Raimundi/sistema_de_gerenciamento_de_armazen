@@ -1,0 +1,37 @@
+O projeto Sistema de Inventário Armazém visa criar e gerenciar um banco de dados para um sistema de controle de inventário. O sistema é projetado para lidar com três principais entidades:
+
+Categorias: Representa as categorias de produtos disponíveis no inventário. Cada categoria tem um identificador único (categoria_id) e um nome (nome).
+
+Produtos: Contém informações sobre os produtos no inventário. Cada produto possui um identificador único (produto_id), nome (nome), descrição (descricao), preço (preco), quantidade em estoque (quantidade_estoque) e está associado a uma categoria (categoria_id).
+
+Fornecedores: Armazena informações sobre os fornecedores dos produtos. Cada fornecedor tem um identificador único (fornecedor_id), nome (nome), informações de contato (contato) e endereço (endereco).
+
+Funcionalidades
+Criação de Tabelas: O sistema cria tabelas para categorias, produtos e fornecedores com suas respectivas colunas e tipos de dados.
+
+Inserção de Dados: Dados exemplo são inseridos nas tabelas para testar o funcionamento do banco de dados.
+
+Consultas: Permite consultar informações sobre produtos, categorias e fornecedores.
+
+Atualizações: Suporta a atualização de dados existentes, como o preço de um produto ou o nome de uma categoria.
+
+Deleção: Permite a remoção de produtos e categorias do banco de dados.
+
+Requisitos
+Banco de Dados: MySQL ou outro sistema de gerenciamento de banco de dados compatível com SQL.
+
+SQL: Familiaridade com comandos SQL para criar, inserir, consultar, atualizar e deletar dados.
+
+Instruções de Uso
+Configuração Inicial:
+
+Execute o script SQL fornecido para criar o banco de dados e as tabelas necessárias.
+Inserção de Dados:
+
+Insira dados exemplo nas tabelas de categorias, produtos e fornecedores para iniciar o uso do sistema.
+Consultas e Manutenção:
+
+Use comandos SQL para consultar dados, atualizar registros e deletar entradas conforme necessário.
+Licença:
+
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para detalhes.
