@@ -1,0 +1,62 @@
+# Inventário Armazém
+
+Este projeto configura um banco de dados MySQL para um sistema de gerenciamento de inventário. Ele inclui tabelas para produtos, categorias e fornecedores, com exemplos de dados e operações básicas de consulta, atualização e deleção.
+
+## Estrutura do Banco de Dados
+
+O banco de dados `inventario_armazem` contém as seguintes tabelas:
+
+1. **categorias**
+   - `categoria_id` (VARCHAR(100)): Identificador único da categoria.
+   - `nome` (VARCHAR(100)): Nome da categoria.
+
+2. **tabela_de_produtos**
+   - `produto_id` (INT AUTO_INCREMENT): Identificador único do produto.
+   - `nome` (VARCHAR(100)): Nome do produto.
+   - `descricao` (VARCHAR(100)): Descrição do produto.
+   - `preco` (DECIMAL(10,2)): Preço do produto.
+   - `quantidade_estoque` (DECIMAL(10,2)): Quantidade em estoque.
+   - `categoria_id` (VARCHAR(100)): Identificador da categoria do produto (chave estrangeira).
+
+3. **fornecedores**
+   - `fornecedor_id` (INT AUTO_INCREMENT): Identificador único do fornecedor.
+   - `nome` (VARCHAR(100)): Nome do fornecedor.
+   - `contato` (VARCHAR(100)): Informação de contato do fornecedor.
+   - `endereco` (VARCHAR(100)): Endereço do fornecedor.
+
+## Configuração
+
+Para configurar o banco de dados, execute os seguintes comandos SQL:
+
+1. **Criação do Banco de Dados e Tabelas**
+
+```sql
+set sql_safe_updates = 0;
+
+drop database if exists inventario_armazem;
+
+create database inventario_armazem;
+
+use inventario_armazem;
+
+create table categorias (
+    categoria_id varchar(100) primary key,
+    nome varchar(100) not null
+);
+
+create table tabela_de_produtos (
+    produto_id int auto_increment primary key,
+    nome varchar(100) not null,
+    descricao varchar(100) not null,
+    preco decimal(10,2) not null,
+    quantidade_estoque decimal(10,2),
+    categoria_id varchar(100) not null,
+    foreign key (categoria_id) references categorias(categoria_id)
+);
+
+create table fornecedores (
+    fornecedor_id int auto_increment primary key,
+    nome varchar(100) not null,
+    contato varchar(100) not null,
+    endereco varchar(100) not null
+);
