@@ -1,0 +1,35 @@
+# Ignorar arquivos de dump de banco de dados SQL
+*.sql
+*.sql.gz
+
+# Ignorar arquivos de backup
+*.bak
+
+# Ignorar arquivos temporários do sistema
+*.tmp
+*.swp
+
+# Ignorar diretórios de configuração IDE
+.vscode/
+.idea/
+
+# Ignorar arquivos de cache
+*.cache
+
+# Ignorar arquivos de log
+*.log
+
+# Ignorar arquivos gerados automaticamente
+*.pid
+*.seed
+
+# Ignorar arquivos de dados sensíveis ou de configuração específica
+config/
+*.env
+
+# Ignorar diretórios e arquivos relacionados a ambiente de desenvolvimento
+node_modules/
+venv/
+__pycache__/
+*.pyc
+*.pyo
